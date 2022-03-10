@@ -26,21 +26,105 @@ public class LoginPage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        btnExit = new javax.swing.JButton();
+        btnInstall = new javax.swing.JButton();
+        btnUpdate = new javax.swing.JButton();
+        labelTranslate = new javax.swing.JLabel();
+        textFieldPath = new javax.swing.JTextField();
+        boxBarcaCLI = new javax.swing.JCheckBox();
+        boxBarcaWebCloud = new javax.swing.JCheckBox();
+        boxBarcaDesktop = new javax.swing.JCheckBox();
+        btnPath = new javax.swing.JButton();
+        labelInstall = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Barca Setup");
+        setBackground(new java.awt.Color(51, 51, 51));
+        setMinimumSize(new java.awt.Dimension(680, 490));
+        addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentHidden(java.awt.event.ComponentEvent evt) {
+                formComponentHidden(evt);
+            }
+        });
+        getContentPane().setLayout(null);
+
+        btnExit.setText("Sair");
+        getContentPane().add(btnExit);
+        btnExit.setBounds(530, 400, 72, 22);
+
+        btnInstall.setText("Instalar");
+        getContentPane().add(btnInstall);
+        btnInstall.setBounds(440, 400, 72, 22);
+
+        btnUpdate.setText("Atualizar");
+        getContentPane().add(btnUpdate);
+        btnUpdate.setBounds(20, 400, 76, 22);
+
+        labelTranslate.setForeground(new java.awt.Color(255, 255, 255));
+        labelTranslate.setText("v1.0.0");
+        getContentPane().add(labelTranslate);
+        labelTranslate.setBounds(530, 10, 50, 30);
+
+        textFieldPath.setText("C:\\Program Files (x86)\\Barca");
+        getContentPane().add(textFieldPath);
+        textFieldPath.setBounds(50, 310, 307, 20);
+
+        boxBarcaCLI.setForeground(new java.awt.Color(255, 255, 255));
+        boxBarcaCLI.setText("Barca CLI");
+        getContentPane().add(boxBarcaCLI);
+        boxBarcaCLI.setBounds(330, 130, 72, 20);
+
+        boxBarcaWebCloud.setForeground(new java.awt.Color(255, 255, 255));
+        boxBarcaWebCloud.setText("BWC Barca Web Cloud");
+        boxBarcaWebCloud.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boxBarcaWebCloudActionPerformed(evt);
+            }
+        });
+        getContentPane().add(boxBarcaWebCloud);
+        boxBarcaWebCloud.setBounds(330, 160, 143, 20);
+
+        boxBarcaDesktop.setForeground(new java.awt.Color(255, 255, 255));
+        boxBarcaDesktop.setText("Barca Desktop");
+        boxBarcaDesktop.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boxBarcaDesktopActionPerformed(evt);
+            }
+        });
+        getContentPane().add(boxBarcaDesktop);
+        boxBarcaDesktop.setBounds(330, 190, 98, 20);
+
+        btnPath.setText("Alterar");
+        getContentPane().add(btnPath);
+        btnPath.setBounds(380, 310, 72, 20);
+
+        labelInstall.setForeground(new java.awt.Color(255, 255, 255));
+        labelInstall.setSize(11, 12);
+        labelInstall.setText("Selecione o que deseja instalar/atualizar");
+        getContentPane().add(labelInstall);
+        labelInstall.setBounds(300, 70, 380, 30);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login/assets/barca-logo.jpeg"))); // NOI18N
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(-10, 0, 700, 520);
+
+        getAccessibleContext().setAccessibleName("Barca Setup");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void boxBarcaWebCloudActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boxBarcaWebCloudActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boxBarcaWebCloudActionPerformed
+
+    private void formComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentHidden
+        // TODO add your handling code here:
+    }//GEN-LAST:event_formComponentHidden
+
+    private void boxBarcaDesktopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boxBarcaDesktopActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boxBarcaDesktopActionPerformed
 
     /**
      * @param args the command line arguments
@@ -53,7 +137,7 @@ public class LoginPage extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -78,5 +162,16 @@ public class LoginPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox boxBarcaCLI;
+    private javax.swing.JCheckBox boxBarcaDesktop;
+    private javax.swing.JCheckBox boxBarcaWebCloud;
+    private javax.swing.JButton btnExit;
+    private javax.swing.JButton btnInstall;
+    private javax.swing.JButton btnPath;
+    private javax.swing.JButton btnUpdate;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel labelInstall;
+    private javax.swing.JLabel labelTranslate;
+    private javax.swing.JTextField textFieldPath;
     // End of variables declaration//GEN-END:variables
 }
