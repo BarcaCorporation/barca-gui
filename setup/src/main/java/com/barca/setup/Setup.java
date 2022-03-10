@@ -5,6 +5,8 @@
 
 package com.barca.setup;
 
+import login.IntroPage;
+
 /**
  *
  * @author Dev. Aníbal Souza
@@ -12,6 +14,7 @@ package com.barca.setup;
 public class Setup {
 
     public static void main(String[] args) {
-        System.out.println("Hello World! Welcome to Barca");
+        System.out.println("Welcome to Barca Project");
+        new IntroPage().setVisible(true);
     }
 }
