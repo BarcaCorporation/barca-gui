@@ -4,16 +4,18 @@
  */
 package login;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author Dev. Aníbal Henrique
  */
-public class LoginPage extends javax.swing.JFrame {
+public class ToolsPage extends javax.swing.JFrame {
 
     /**
      * Creates new form LoginPage
      */
-    public LoginPage() {
+    public ToolsPage() {
         initComponents();
     }
 
@@ -41,7 +43,8 @@ public class LoginPage extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Barca Setup");
         setBackground(new java.awt.Color(51, 51, 51));
-        setMinimumSize(new java.awt.Dimension(680, 490));
+        setMaximumSize(new java.awt.Dimension(700, 521));
+        setMinimumSize(new java.awt.Dimension(680, 487));
         addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentHidden(java.awt.event.ComponentEvent evt) {
                 formComponentHidden(evt);
@@ -50,6 +53,11 @@ public class LoginPage extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         btnExit.setText("Sair");
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnExit);
         btnExit.setBounds(530, 400, 72, 22);
 
@@ -100,16 +108,14 @@ public class LoginPage extends javax.swing.JFrame {
         btnPath.setBounds(380, 310, 72, 20);
 
         labelInstall.setForeground(new java.awt.Color(255, 255, 255));
-        labelInstall.setSize(11, 12);
         labelInstall.setText("Selecione o que deseja instalar/atualizar");
         getContentPane().add(labelInstall);
         labelInstall.setBounds(300, 70, 380, 30);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login/assets/barca-logo.jpeg"))); // NOI18N
+        jLabel3.setMaximumSize(new java.awt.Dimension(1920, 1080));
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(-10, 0, 700, 520);
-
-        getAccessibleContext().setAccessibleName("Barca Setup");
+        jLabel3.setBounds(0, 0, 970, 495);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -125,6 +131,11 @@ public class LoginPage extends javax.swing.JFrame {
     private void boxBarcaDesktopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boxBarcaDesktopActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_boxBarcaDesktopActionPerformed
+
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_btnExitActionPerformed
 
     /**
      * @param args the command line arguments
@@ -143,20 +154,23 @@ public class LoginPage extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LoginPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ToolsPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LoginPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ToolsPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LoginPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ToolsPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LoginPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ToolsPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new LoginPage().setVisible(true);
+                new ToolsPage().setVisible(true);
             }
         });
     }
