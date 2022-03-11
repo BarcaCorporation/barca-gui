@@ -51,16 +51,31 @@ public class TermsAndLicenses extends javax.swing.JFrame {
 
         btnBackTermsAndLicense.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnBackTermsAndLicense.setText("< Voltar");
+        btnBackTermsAndLicense.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackTermsAndLicenseActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnBackTermsAndLicense);
         btnBackTermsAndLicense.setBounds(340, 390, 90, 30);
 
         btnCancelarTermsAndLicense.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnCancelarTermsAndLicense.setText("Cancelar");
+        btnCancelarTermsAndLicense.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarTermsAndLicenseActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnCancelarTermsAndLicense);
         btnCancelarTermsAndLicense.setBounds(590, 390, 90, 30);
 
         btnNextTermsAndLicense.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnNextTermsAndLicense.setText("Avancar");
+        btnNextTermsAndLicense.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNextTermsAndLicenseActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnNextTermsAndLicense);
         btnNextTermsAndLicense.setBounds(440, 390, 90, 30);
 
@@ -79,6 +94,23 @@ public class TermsAndLicenses extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnNextTermsAndLicenseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextTermsAndLicenseActionPerformed
+        // TODO add your handling code here:
+        new ToolsPage().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnNextTermsAndLicenseActionPerformed
+
+    private void btnCancelarTermsAndLicenseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarTermsAndLicenseActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_btnCancelarTermsAndLicenseActionPerformed
+
+    private void btnBackTermsAndLicenseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackTermsAndLicenseActionPerformed
+        // TODO add your handling code here:
+        new IntroPage().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnBackTermsAndLicenseActionPerformed
 
     /**
      * @param args the command line arguments
