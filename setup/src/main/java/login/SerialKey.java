@@ -32,13 +32,14 @@ public class SerialKey extends javax.swing.JFrame {
         jColorChooser2 = new javax.swing.JColorChooser();
         jLabel2 = new javax.swing.JLabel();
         txtSerialKey = new javax.swing.JTextField();
-        btnNextSerialKey = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         titleSerialKeyMaster = new javax.swing.JLabel();
         titleSerialKey = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         labelSerialKey = new javax.swing.JLabel();
+        btnNextSerialKey = new javax.swing.JButton();
         checkBoxLastVersionsOn = new javax.swing.JCheckBox();
+        jSeparator2 = new javax.swing.JSeparator();
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
         jDialog1.getContentPane().setLayout(jDialog1Layout);
@@ -67,42 +68,40 @@ public class SerialKey extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 255));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setMaximumSize(new java.awt.Dimension(1280, 720));
-        setMinimumSize(new java.awt.Dimension(710, 460));
-        setPreferredSize(new java.awt.Dimension(710, 460));
+        setMinimumSize(new java.awt.Dimension(710, 470));
+        setPreferredSize(new java.awt.Dimension(710, 470));
         getContentPane().setLayout(null);
         getContentPane().add(txtSerialKey);
         txtSerialKey.setBounds(150, 200, 420, 22);
+        getContentPane().add(jSeparator1);
+        jSeparator1.setBounds(50, 20, 615, 10);
 
-        btnNextSerialKey.setText("Próximo");
+        titleSerialKeyMaster.setForeground(new java.awt.Color(204, 204, 204));
+        titleSerialKeyMaster.setText("Para utilizar todos recursos do ecossistema Barca, você vai precisar de uma chave como serial. ");
+        getContentPane().add(titleSerialKeyMaster);
+        titleSerialKeyMaster.setBounds(100, 50, 497, 16);
+
+        titleSerialKey.setForeground(new java.awt.Color(204, 204, 204));
+        titleSerialKey.setText("Este programa tem privilégios em categorias de usuários, no modo básico você tem gratuito uma chave.");
+        getContentPane().add(titleSerialKey);
+        titleSerialKey.setBounds(90, 70, 550, 16);
+
+        jPanel1.setBackground(new java.awt.Color(1, 1, 1));
+        jPanel1.setMinimumSize(new java.awt.Dimension(710, 460));
+        jPanel1.setPreferredSize(new java.awt.Dimension(710, 460));
+
+        labelSerialKey.setForeground(new java.awt.Color(204, 204, 204));
+        labelSerialKey.setText("Serial Key");
+
+        btnNextSerialKey.setText("Proximo >");
         btnNextSerialKey.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNextSerialKeyActionPerformed(evt);
             }
         });
-        getContentPane().add(btnNextSerialKey);
-        btnNextSerialKey.setBounds(560, 340, 75, 22);
-        getContentPane().add(jSeparator1);
-        jSeparator1.setBounds(50, 20, 615, 10);
 
-        titleSerialKeyMaster.setForeground(new java.awt.Color(255, 255, 255));
-        titleSerialKeyMaster.setText("Para utilizar todos recursos do ecossistema Barca, você vai precisar de uma chave como serial. ");
-        getContentPane().add(titleSerialKeyMaster);
-        titleSerialKeyMaster.setBounds(100, 50, 497, 16);
-
-        titleSerialKey.setForeground(new java.awt.Color(255, 255, 255));
-        titleSerialKey.setText("Este programa tem privilégios em categorias de usuários, no modo básico você tem gratuito uma chave.");
-        getContentPane().add(titleSerialKey);
-        titleSerialKey.setBounds(90, 70, 550, 16);
-
-        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel1.setMinimumSize(new java.awt.Dimension(710, 460));
-        jPanel1.setPreferredSize(new java.awt.Dimension(710, 460));
-
-        labelSerialKey.setForeground(new java.awt.Color(255, 255, 255));
-        labelSerialKey.setText("Serial Key");
-
-        checkBoxLastVersionsOn.setBackground(new java.awt.Color(0, 0, 0));
-        checkBoxLastVersionsOn.setForeground(new java.awt.Color(255, 255, 255));
+        checkBoxLastVersionsOn.setBackground(new java.awt.Color(1, 1, 1));
+        checkBoxLastVersionsOn.setForeground(new java.awt.Color(204, 204, 204));
         checkBoxLastVersionsOn.setText("Deseja instalar as últimas versões das ferramentas?");
         checkBoxLastVersionsOn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,28 +113,40 @@ public class SerialKey extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 43, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(187, 187, 187)
-                        .addComponent(checkBoxLastVersionsOn))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(88, 88, 88)
-                        .addComponent(labelSerialKey)))
-                .addContainerGap(235, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 681, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(btnNextSerialKey)
+                        .addGap(60, 60, 60))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(checkBoxLastVersionsOn)
+                .addGap(210, 210, 210))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(99, 99, 99)
+                .addComponent(labelSerialKey)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(213, Short.MAX_VALUE)
+                .addContainerGap(202, Short.MAX_VALUE)
                 .addComponent(labelSerialKey)
-                .addGap(78, 78, 78)
+                .addGap(47, 47, 47)
                 .addComponent(checkBoxLastVersionsOn)
-                .addGap(133, 133, 133))
+                .addGap(72, 72, 72)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnNextSerialKey)
+                .addGap(65, 65, 65))
         );
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, -10, 710, 460);
+        jPanel1.setBounds(-30, 0, 730, 460);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -195,6 +206,7 @@ public class SerialKey extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel labelSerialKey;
     private javax.swing.JLabel titleSerialKey;
     private javax.swing.JLabel titleSerialKeyMaster;
