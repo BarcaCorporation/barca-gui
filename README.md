@@ -6,6 +6,15 @@ Desktop GUI Application to setup of Project Barca
 
 <br>
 
+### Welcome To Barca Setup
+
+<br>
+
+ <img src="https://raw.githubusercontent.com/project-barca/community/main/static/desktop/welcome-to-barca-setup.png" align="center" alt="barca-gui-setup" />
+ 
+<br>
+<br>
+
 ### Screen Tools 
 
 <br>
