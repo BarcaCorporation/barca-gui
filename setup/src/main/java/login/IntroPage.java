@@ -165,11 +165,14 @@ public class IntroPage extends javax.swing.JFrame {
         jPanel1.setBounds(-10, 0, 710, 460);
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnNextIntroPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextIntroPageActionPerformed
         // TODO add your handling code here:
-        new TermsAndLicenses().setVisible(true);
+        TermsAndLicenses jframe = new TermsAndLicenses();
+        jframe.setVisible(true);
+        jframe.setDefaultCloseOperation(TermsAndLicenses.DISPOSE_ON_CLOSE);
         this.dispose();
     }//GEN-LAST:event_btnNextIntroPageActionPerformed
 

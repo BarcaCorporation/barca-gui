@@ -93,11 +93,14 @@ public class TermsAndLicenses extends javax.swing.JFrame {
         jSeparator3.setBounds(0, 110, 690, 20);
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnNextTermsAndLicenseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextTermsAndLicenseActionPerformed
         // TODO add your handling code here:
-        new ToolsPage().setVisible(true);
+        SerialKey jframe = new SerialKey();
+        jframe.setVisible(true);
+        jframe.setDefaultCloseOperation(SerialKey.DISPOSE_ON_CLOSE);
         this.dispose();
     }//GEN-LAST:event_btnNextTermsAndLicenseActionPerformed
 
@@ -108,7 +111,9 @@ public class TermsAndLicenses extends javax.swing.JFrame {
 
     private void btnBackTermsAndLicenseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackTermsAndLicenseActionPerformed
         // TODO add your handling code here:
-        new IntroPage().setVisible(true);
+        IntroPage jframe = new IntroPage();
+        jframe.setVisible(true);
+        jframe.setDefaultCloseOperation(IntroPage.DISPOSE_ON_CLOSE);
         this.dispose();
     }//GEN-LAST:event_btnBackTermsAndLicenseActionPerformed
 
