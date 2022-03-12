@@ -26,7 +26,6 @@ static FinishPage finishFrame = new FinishPage();
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        txtBarcaInstaller = new javax.swing.JLabel();
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0));
         jPainel = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
@@ -52,16 +51,15 @@ static FinishPage finishFrame = new FinishPage();
         btnHidden = new javax.swing.JButton();
         btnProximo = new javax.swing.JButton();
         btnFinish = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        txtTitleProject = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(1, 1, 1));
-        setMinimumSize(new java.awt.Dimension(710, 520));
-        setPreferredSize(new java.awt.Dimension(710, 520));
+        setMinimumSize(new java.awt.Dimension(710, 580));
+        setPreferredSize(new java.awt.Dimension(710, 580));
         getContentPane().setLayout(null);
-
-        txtBarcaInstaller.setText("Barca © Installer");
-        getContentPane().add(txtBarcaInstaller);
-        txtBarcaInstaller.setBounds(20, 450, 100, 16);
         getContentPane().add(filler1);
         filler1.setBounds(628, 417, 0, 0);
 
@@ -131,7 +129,7 @@ static FinishPage finishFrame = new FinishPage();
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 320, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -172,7 +170,7 @@ static FinishPage finishFrame = new FinishPage();
         jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         titleSerialKey.setForeground(new java.awt.Color(204, 204, 204));
-        titleSerialKey.setText("Por favor leia os termos de licença antes de instalar o Barca 64-bit");
+        titleSerialKey.setText("Por favor leia os termos de licença antes da instalação do Barca 64-bit");
 
         titleSerialKey2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         titleSerialKey2.setForeground(new java.awt.Color(204, 204, 204));
@@ -246,7 +244,7 @@ static FinishPage finishFrame = new FinishPage();
                 .addComponent(checkBoxLastVersionsOn1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
+                .addContainerGap(286, Short.MAX_VALUE)
                 .addComponent(labelSerialKey1)
                 .addGap(28, 28, 28)
                 .addComponent(txtSerialKey1, javax.swing.GroupLayout.PREFERRED_SIZE, 499, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -298,34 +296,62 @@ static FinishPage finishFrame = new FinishPage();
             }
         });
 
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "português-brasileiro", "english", "spanol", "mexico" }));
+
+        txtTitleProject.setText("Barca v1.0");
+
+        jLabel3.setText("Barca © Installer");
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(348, Short.MAX_VALUE)
-                .addComponent(btnHidden, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(btnProximo, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnFinish, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(94, 94, 94))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 288, Short.MAX_VALUE)
+                                .addComponent(btnHidden, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnProximo, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(78, 78, 78)
+                                .addComponent(btnFinish, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(txtTitleProject, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(95, 95, 95))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(508, Short.MAX_VALUE)
+                .addGap(37, 37, 37)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnHidden, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnProximo, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnFinish, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(115, 115, 115))
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtTitleProject))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnHidden)
+                    .addComponent(btnProximo)
+                    .addComponent(btnFinish))
+                .addGap(123, 123, 123))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addGap(28, 462, Short.MAX_VALUE)
+                .addComponent(jLabel3)
+                .addGap(182, 182, 182))
         );
 
         getContentPane().add(jPanel4);
         jPanel4.setBounds(-20, -10, 770, 660);
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnFinishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFinishActionPerformed
@@ -430,7 +456,9 @@ static FinishPage finishFrame = new FinishPage();
     private javax.swing.JButton btnProximo;
     private javax.swing.JCheckBox checkBoxLastVersionsOn1;
     private javax.swing.Box.Filler filler1;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPainel;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -445,7 +473,7 @@ static FinishPage finishFrame = new FinishPage();
     private javax.swing.JLabel titleSerialKey1;
     private javax.swing.JLabel titleSerialKey2;
     private javax.swing.JLabel titleSerialKeyMaster1;
-    private javax.swing.JLabel txtBarcaInstaller;
     private javax.swing.JTextField txtSerialKey1;
+    private javax.swing.JLabel txtTitleProject;
     // End of variables declaration//GEN-END:variables
 }
