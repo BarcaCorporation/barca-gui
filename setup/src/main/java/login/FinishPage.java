@@ -26,10 +26,8 @@ static FinishPage finishFrame = new FinishPage();
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnFinish = new javax.swing.JButton();
+        txtBarcaInstaller = new javax.swing.JLabel();
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0));
-        btnProximo = new javax.swing.JButton();
-        btnHidden = new javax.swing.JButton();
         jPainel = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -41,14 +39,19 @@ static FinishPage finishFrame = new FinishPage();
         textFieldPath = new javax.swing.JTextField();
         btnPath = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        txtSerialKey = new javax.swing.JTextField();
-        labelSerialKey = new javax.swing.JLabel();
         titleSerialKey = new javax.swing.JLabel();
-        titleSerialKeyMaster = new javax.swing.JLabel();
-        checkBoxLastVersionsOn = new javax.swing.JCheckBox();
+        titleSerialKey2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        txtTitleTermsAndLicense = new javax.swing.JLabel();
-        txtSubtitleTermsAndLicense = new javax.swing.JLabel();
+        txtSerialKey1 = new javax.swing.JTextField();
+        labelSerialKey1 = new javax.swing.JLabel();
+        titleSerialKey1 = new javax.swing.JLabel();
+        titleSerialKeyMaster1 = new javax.swing.JLabel();
+        checkBoxLastVersionsOn1 = new javax.swing.JCheckBox();
+        jSeparator2 = new javax.swing.JSeparator();
+        jPanel4 = new javax.swing.JPanel();
+        btnHidden = new javax.swing.JButton();
+        btnProximo = new javax.swing.JButton();
+        btnFinish = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(1, 1, 1));
@@ -56,34 +59,11 @@ static FinishPage finishFrame = new FinishPage();
         setPreferredSize(new java.awt.Dimension(710, 520));
         getContentPane().setLayout(null);
 
-        btnFinish.setText("concluido");
-        btnFinish.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnFinishActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnFinish);
-        btnFinish.setBounds(545, 487, 83, 22);
+        txtBarcaInstaller.setText("Barca © Installer");
+        getContentPane().add(txtBarcaInstaller);
+        txtBarcaInstaller.setBounds(20, 450, 100, 16);
         getContentPane().add(filler1);
         filler1.setBounds(628, 417, 0, 0);
-
-        btnProximo.setText("proximo");
-        btnProximo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnProximoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnProximo);
-        btnProximo.setBounds(452, 487, 75, 22);
-
-        btnHidden.setText("hidden");
-        btnHidden.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHiddenActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnHidden);
-        btnHidden.setBounds(339, 487, 72, 22);
 
         jPainel.setBackground(new java.awt.Color(51, 51, 51));
         jPainel.setLayout(new java.awt.CardLayout());
@@ -188,104 +168,162 @@ static FinishPage finishFrame = new FinishPage();
 
         jPainel.add(jPanel1, "card2");
 
-        jPanel3.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel3.setBackground(new java.awt.Color(1, 1, 1));
         jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        labelSerialKey.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        labelSerialKey.setForeground(new java.awt.Color(204, 204, 204));
-        labelSerialKey.setText("Serial Key");
-
         titleSerialKey.setForeground(new java.awt.Color(204, 204, 204));
-        titleSerialKey.setText("Este programa tem privilégios em categorias de usuários, no modo básico você tem gratuito uma chave.");
+        titleSerialKey.setText("Por favor leia os termos de licença antes de instalar o Barca 64-bit");
 
-        titleSerialKeyMaster.setForeground(new java.awt.Color(204, 204, 204));
-        titleSerialKeyMaster.setText("Para utilizar todos recursos do ecossistema Barca, você vai precisar de uma chave como serial. ");
-
-        checkBoxLastVersionsOn.setBackground(new java.awt.Color(51, 51, 51));
-        checkBoxLastVersionsOn.setForeground(new java.awt.Color(204, 204, 204));
-        checkBoxLastVersionsOn.setText("Deseja instalar as últimas versões das ferramentas?");
-        checkBoxLastVersionsOn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                checkBoxLastVersionsOnActionPerformed(evt);
-            }
-        });
+        titleSerialKey2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        titleSerialKey2.setForeground(new java.awt.Color(204, 204, 204));
+        titleSerialKey2.setText("License Agreement");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(78, 78, 78)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(titleSerialKey)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(titleSerialKeyMaster)))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(208, 208, 208)
-                .addComponent(checkBoxLastVersionsOn)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
-                .addComponent(labelSerialKey)
-                .addGap(28, 28, 28)
-                .addComponent(txtSerialKey, javax.swing.GroupLayout.PREFERRED_SIZE, 499, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(75, 75, 75))
+                .addGap(44, 44, 44)
+                .addComponent(titleSerialKey, javax.swing.GroupLayout.PREFERRED_SIZE, 432, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(469, Short.MAX_VALUE))
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGap(38, 38, 38)
+                    .addComponent(titleSerialKey2)
+                    .addContainerGap(780, Short.MAX_VALUE)))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(27, 27, 27)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(72, 72, 72)
                 .addComponent(titleSerialKey)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(titleSerialKeyMaster)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtSerialKey, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelSerialKey))
-                .addGap(69, 69, 69)
-                .addComponent(checkBoxLastVersionsOn)
-                .addGap(58, 58, 58))
+                .addContainerGap(254, Short.MAX_VALUE))
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGap(39, 39, 39)
+                    .addComponent(titleSerialKey2)
+                    .addContainerGap(283, Short.MAX_VALUE)))
         );
 
         jPainel.add(jPanel3, "card2");
 
-        jPanel2.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel2.setBackground(new java.awt.Color(1, 1, 1));
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        txtTitleTermsAndLicense.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        txtTitleTermsAndLicense.setText("License Agreement");
+        labelSerialKey1.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        labelSerialKey1.setForeground(new java.awt.Color(204, 204, 204));
+        labelSerialKey1.setText("Serial Key");
 
-        txtSubtitleTermsAndLicense.setText("Por favor leia os termos de licença antes de instalar Barca 64-bit.");
+        titleSerialKey1.setForeground(new java.awt.Color(204, 204, 204));
+        titleSerialKey1.setText("Este programa tem privilégios em categorias de usuários, no modo básico você tem gratuito uma chave.");
+
+        titleSerialKeyMaster1.setForeground(new java.awt.Color(204, 204, 204));
+        titleSerialKeyMaster1.setText("Para utilizar todos recursos do ecossistema Barca, você vai precisar de uma chave como serial. ");
+
+        checkBoxLastVersionsOn1.setBackground(new java.awt.Color(1, 1, 1));
+        checkBoxLastVersionsOn1.setForeground(new java.awt.Color(204, 204, 204));
+        checkBoxLastVersionsOn1.setText("Deseja instalar as últimas versões das ferramentas?");
+        checkBoxLastVersionsOn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkBoxLastVersionsOn1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(17, 17, 17)
+                .addGap(78, 78, 78)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtTitleTermsAndLicense, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(titleSerialKey1)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(txtSubtitleTermsAndLicense, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(275, Short.MAX_VALUE))
+                        .addGap(25, 25, 25)
+                        .addComponent(titleSerialKeyMaster1)))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(208, 208, 208)
+                .addComponent(checkBoxLastVersionsOn1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(53, Short.MAX_VALUE)
+                .addComponent(labelSerialKey1)
+                .addGap(28, 28, 28)
+                .addComponent(txtSerialKey1, javax.swing.GroupLayout.PREFERRED_SIZE, 499, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(75, 75, 75))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(txtTitleTermsAndLicense)
-                .addGap(10, 10, 10)
-                .addComponent(txtSubtitleTermsAndLicense)
-                .addContainerGap(290, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(titleSerialKey1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(titleSerialKeyMaster1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtSerialKey1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelSerialKey1))
+                .addGap(69, 69, 69)
+                .addComponent(checkBoxLastVersionsOn1)
+                .addGap(58, 58, 58))
         );
 
         jPainel.add(jPanel2, "card2");
 
         getContentPane().add(jPainel);
         jPainel.setBounds(-10, 90, 716, 346);
+        getContentPane().add(jSeparator2);
+        jSeparator2.setBounds(120, 460, 550, 10);
+
+        jPanel4.setBackground(new java.awt.Color(17, 17, 17));
+
+        btnHidden.setText("hidden");
+        btnHidden.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHiddenActionPerformed(evt);
+            }
+        });
+
+        btnProximo.setText("proximo");
+        btnProximo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProximoActionPerformed(evt);
+            }
+        });
+
+        btnFinish.setText("concluido");
+        btnFinish.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFinishActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(348, Short.MAX_VALUE)
+                .addComponent(btnHidden, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(btnProximo, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnFinish, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(94, 94, 94))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(508, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnHidden, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnProximo, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnFinish, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(115, 115, 115))
+        );
+
+        getContentPane().add(jPanel4);
+        jPanel4.setBounds(-20, -10, 770, 660);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -331,10 +369,6 @@ static FinishPage finishFrame = new FinishPage();
         jPainel.revalidate();
     }//GEN-LAST:event_btnProximoActionPerformed
 
-    private void checkBoxLastVersionsOnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxLastVersionsOnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_checkBoxLastVersionsOnActionPerformed
-
     private void boxBarcaWebCloudActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boxBarcaWebCloudActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_boxBarcaWebCloudActionPerformed
@@ -346,6 +380,10 @@ static FinishPage finishFrame = new FinishPage();
     private void boxBarcaDesktopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boxBarcaDesktopActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_boxBarcaDesktopActionPerformed
+
+    private void checkBoxLastVersionsOn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxLastVersionsOn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_checkBoxLastVersionsOn1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -390,21 +428,24 @@ static FinishPage finishFrame = new FinishPage();
     private javax.swing.JButton btnHidden;
     private javax.swing.JButton btnPath;
     private javax.swing.JButton btnProximo;
-    private javax.swing.JCheckBox checkBoxLastVersionsOn;
+    private javax.swing.JCheckBox checkBoxLastVersionsOn1;
     private javax.swing.Box.Filler filler1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPainel;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel labelInstall;
-    private javax.swing.JLabel labelSerialKey;
+    private javax.swing.JLabel labelSerialKey1;
     private javax.swing.JLabel labelTranslate;
     private javax.swing.JTextField textFieldPath;
     private javax.swing.JLabel titleSerialKey;
-    private javax.swing.JLabel titleSerialKeyMaster;
-    private javax.swing.JTextField txtSerialKey;
-    private javax.swing.JLabel txtSubtitleTermsAndLicense;
-    private javax.swing.JLabel txtTitleTermsAndLicense;
+    private javax.swing.JLabel titleSerialKey1;
+    private javax.swing.JLabel titleSerialKey2;
+    private javax.swing.JLabel titleSerialKeyMaster1;
+    private javax.swing.JLabel txtBarcaInstaller;
+    private javax.swing.JTextField txtSerialKey1;
     // End of variables declaration//GEN-END:variables
 }
