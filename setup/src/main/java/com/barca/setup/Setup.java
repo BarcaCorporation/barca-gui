@@ -5,7 +5,7 @@
 
 package com.barca.setup;
 
-import login.IntroPage;
+import login.FinishPage;
 
 /**
  *
@@ -15,6 +15,6 @@ public class Setup {
 
     public static void main(String[] args) {
         System.out.println("Welcome to Barca Project");
-        new IntroPage().setVisible(true);
+        new FinishPage().setVisible(true);
     }
 }
