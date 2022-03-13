@@ -62,9 +62,9 @@ public class FinishPage extends javax.swing.JFrame {
         titleSerialKey3 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         jPanel4 = new javax.swing.JPanel();
-        btnHidden = new javax.swing.JButton();
-        btnProximo = new javax.swing.JButton();
-        btnFinish = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
+        btnNext = new javax.swing.JButton();
+        btnCancel = new javax.swing.JButton();
         jComboBox1 = new javax.swing.JComboBox<>();
         txtTitleProject = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -414,24 +414,24 @@ public class FinishPage extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(17, 17, 17));
 
-        btnHidden.setText("hidden");
-        btnHidden.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setText("< Voltar");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHiddenActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
 
-        btnProximo.setText("proximo");
-        btnProximo.addActionListener(new java.awt.event.ActionListener() {
+        btnNext.setText("Proximo");
+        btnNext.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnProximoActionPerformed(evt);
+                btnNextActionPerformed(evt);
             }
         });
 
-        btnFinish.setText("concluido");
-        btnFinish.addActionListener(new java.awt.event.ActionListener() {
+        btnCancel.setText("Cancelar");
+        btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnFinishActionPerformed(evt);
+                btnCancelActionPerformed(evt);
             }
         });
 
@@ -459,11 +459,11 @@ public class FinishPage extends javax.swing.JFrame {
                                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGap(23, 288, Short.MAX_VALUE)
-                                .addComponent(btnHidden, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnProximo, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnNext, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(78, 78, 78)
-                                .addComponent(btnFinish, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(btnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(95, 95, 95))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel3)
@@ -478,9 +478,9 @@ public class FinishPage extends javax.swing.JFrame {
                     .addComponent(txtTitleProject))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnHidden)
-                    .addComponent(btnProximo)
-                    .addComponent(btnFinish))
+                    .addComponent(btnBack)
+                    .addComponent(btnNext)
+                    .addComponent(btnCancel))
                 .addGap(123, 123, 123))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addGap(28, 462, Short.MAX_VALUE)
@@ -495,46 +495,136 @@ public class FinishPage extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnFinishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFinishActionPerformed
+    
+    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
         // TODO add your handling code here:
-        // remover painel
-        jPainel.removeAll();
-        jPainel.repaint();
-        jPainel.revalidate();
-        
-        // adicionar painel
-        jPainel.add(painelTools);
-        jPainel.repaint();
-        jPainel.revalidate();
-        
-    }//GEN-LAST:event_btnFinishActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_btnCancelActionPerformed
 
-    private void btnHiddenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHiddenActionPerformed
+    int clicked = 0;
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
+        System.out.println(clicked);
         
-        // remover painel
-        jPainel.removeAll();
-        jPainel.repaint();
-        jPainel.revalidate();
-        
-        // adicionar painel
-        jPainel.add(painelSerialKey);
-        jPainel.repaint();
-        jPainel.revalidate();
-    }//GEN-LAST:event_btnHiddenActionPerformed
+         switch (clicked) {
+            case 2:
+                // remover painel
+                jPainel.removeAll();
+                jPainel.repaint();
+                jPainel.revalidate();
 
-    private void btnProximoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProximoActionPerformed
+                // adicionar painel
+                jPainel.add(painelWelcomeToBarca);
+                jPainel.repaint();
+                jPainel.revalidate();
+                System.out.println("welcome to barca");
+                break;
+            case 3:
+              // remover painel
+                jPainel.removeAll();
+                jPainel.repaint();
+                jPainel.revalidate();
+
+                // adicionar painel
+                jPainel.add(painelTermsAndLicense);
+                jPainel.repaint();
+                jPainel.revalidate();
+                System.out.println("terms and license");
+              break;
+            case 4:
+                // remover painel
+                jPainel.removeAll();
+                jPainel.repaint();
+                jPainel.revalidate();
+
+                // adicionar painel
+                jPainel.add(painelSerialKey);
+                jPainel.repaint();
+                jPainel.revalidate();
+                System.out.println("serial key");
+              break;
+            case 5:
+                // remover painel
+                jPainel.removeAll();
+                jPainel.repaint();
+                jPainel.revalidate();
+
+                // adicionar painel
+                jPainel.add(painelTools);
+                jPainel.repaint();
+                jPainel.revalidate();
+                System.out.println("tools");
+              break;
+            default:
+                 // remover painel
+                jPainel.removeAll();
+                jPainel.repaint();
+                jPainel.revalidate();
+
+                // adicionar painel
+                jPainel.add(painelWelcomeToBarca);
+                jPainel.repaint();
+                jPainel.revalidate();
+                System.out.println("welcome to barca");
+          }
+    }//GEN-LAST:event_btnBackActionPerformed
+
+    private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
         // TODO add your handling code here:
-        // remover painel
-        jPainel.removeAll();
-        jPainel.repaint();
-        jPainel.revalidate();
+        clicked++;
+        System.out.println(clicked);
         
-        // adicionar painel
-        jPainel.add(painelTermsAndLicense);
-        jPainel.repaint();
-        jPainel.revalidate();
-    }//GEN-LAST:event_btnProximoActionPerformed
+         switch (clicked) {
+            case 1:
+                // remover painel
+                jPainel.removeAll();
+                jPainel.repaint();
+                jPainel.revalidate();
+
+                // adicionar painel
+                jPainel.add(painelTermsAndLicense);
+                jPainel.repaint();
+                jPainel.revalidate();
+                System.out.println("license and terms");
+                break;
+            case 2:
+              // remover painel
+                jPainel.removeAll();
+                jPainel.repaint();
+                jPainel.revalidate();
+
+                // adicionar painel
+                jPainel.add(painelSerialKey);
+                jPainel.repaint();
+                jPainel.revalidate();
+                System.out.println("serial key");
+              break;
+            case 3:
+                // remover painel
+                jPainel.removeAll();
+                jPainel.repaint();
+                jPainel.revalidate();
+
+                // adicionar painel
+                jPainel.add(painelTools);
+                jPainel.repaint();
+                jPainel.revalidate();
+                System.out.println("tools");
+              break;
+            default:
+                 // remover painel
+                jPainel.removeAll();
+                jPainel.repaint();
+                jPainel.revalidate();
+
+                // adicionar painel
+                jPainel.add(painelWelcomeToBarca);
+                jPainel.repaint();
+                jPainel.revalidate();
+                System.out.println("welcome to barca");
+          }
+        
+    }//GEN-LAST:event_btnNextActionPerformed
 
     private void checkBoxLastVersionsOn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxLastVersionsOn1ActionPerformed
         // TODO add your handling code here:
@@ -588,10 +678,10 @@ public class FinishPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnFinish;
-    private javax.swing.JButton btnHidden;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnCancel;
+    private javax.swing.JButton btnNext;
     private javax.swing.JButton btnPathInstaller;
-    private javax.swing.JButton btnProximo;
     private javax.swing.JRadioButton btnRadioBWC;
     private javax.swing.JRadioButton btnRadioBarcaCLI;
     private javax.swing.JRadioButton btnRadioBarcaDesktop;
