@@ -32,5 +32,14 @@ Desktop GUI Application to setup of Project Barca
 
 <br>
 <br>
+ 
+ ### Screen Setup GIF
+
+<br>
+
+ <img src="https://raw.githubusercontent.com/project-barca/community/main/static/desktop/barca-setup-show.gif" align="center" alt="barca-gui-setup" />
+
+<br>
+<br>
 
 
