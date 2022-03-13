@@ -9,7 +9,6 @@ package login;
  * @author Dev. Aníbal Henrique
  */
 public class FinishPage extends javax.swing.JFrame {
-static FinishPage finishFrame = new FinishPage();
     /**
      * Creates new form FinishPage
      */
@@ -28,24 +27,39 @@ static FinishPage finishFrame = new FinishPage();
 
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0));
         jPainel = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        boxBarcaDesktop = new javax.swing.JCheckBox();
-        boxBarcaCLI = new javax.swing.JCheckBox();
-        boxBarcaWebCloud = new javax.swing.JCheckBox();
-        labelInstall = new javax.swing.JLabel();
-        labelTranslate = new javax.swing.JLabel();
-        textFieldPath = new javax.swing.JTextField();
-        btnPath = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
+        painelWelcomeToBarca = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        labelInstall2 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        painelTermsAndLicense = new javax.swing.JPanel();
         titleSerialKey = new javax.swing.JLabel();
         titleSerialKey2 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
+        painelSerialKey = new javax.swing.JPanel();
         txtSerialKey1 = new javax.swing.JTextField();
         labelSerialKey1 = new javax.swing.JLabel();
         titleSerialKey1 = new javax.swing.JLabel();
         titleSerialKeyMaster1 = new javax.swing.JLabel();
         checkBoxLastVersionsOn1 = new javax.swing.JCheckBox();
+        painelTools = new javax.swing.JPanel();
+        labelInstall = new javax.swing.JLabel();
+        fieldPathInstallerBarca = new javax.swing.JTextField();
+        btnPathInstaller = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel8 = new javax.swing.JLabel();
+        btnRadioBarcaCLI = new javax.swing.JRadioButton();
+        btnRadioBWC = new javax.swing.JRadioButton();
+        btnRadioBarcaDesktop = new javax.swing.JRadioButton();
+        btnRadioFull = new javax.swing.JRadioButton();
+        btnRadioManual = new javax.swing.JRadioButton();
+        txtDescriptionTools = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtAreaTool = new javax.swing.JTextArea();
+        painelSuccess = new javax.swing.JPanel();
+        labelSerialKey2 = new javax.swing.JLabel();
+        titleSerialKey3 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         jPanel4 = new javax.swing.JPanel();
         btnHidden = new javax.swing.JButton();
@@ -56,6 +70,7 @@ static FinishPage finishFrame = new FinishPage();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Barca Setup 64-bit");
         setBackground(new java.awt.Color(1, 1, 1));
         setMinimumSize(new java.awt.Dimension(710, 580));
         setPreferredSize(new java.awt.Dimension(710, 580));
@@ -66,108 +81,70 @@ static FinishPage finishFrame = new FinishPage();
         jPainel.setBackground(new java.awt.Color(51, 51, 51));
         jPainel.setLayout(new java.awt.CardLayout());
 
-        jPanel1.setBackground(new java.awt.Color(1, 1, 1));
-        jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        painelWelcomeToBarca.setBackground(new java.awt.Color(1, 1, 1));
+        painelWelcomeToBarca.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dev. Aníbal Henrique\\OneDrive\\Imagens\\barca-logo.jpeg")); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Dev. Aníbal Henrique\\OneDrive\\Imagens\\barca-logo.jpeg")); // NOI18N
 
-        boxBarcaDesktop.setBackground(new java.awt.Color(1, 1, 1));
-        boxBarcaDesktop.setForeground(new java.awt.Color(204, 204, 204));
-        boxBarcaDesktop.setText("Barca Desktop");
-        boxBarcaDesktop.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                boxBarcaDesktopActionPerformed(evt);
-            }
-        });
+        labelInstall2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        labelInstall2.setForeground(new java.awt.Color(204, 204, 204));
+        labelInstall2.setText("Welcome to Barca Setup 64-bit ");
 
-        boxBarcaCLI.setBackground(new java.awt.Color(1, 1, 1));
-        boxBarcaCLI.setForeground(new java.awt.Color(204, 204, 204));
-        boxBarcaCLI.setText("Barca CLI");
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Click em 'Próximo' para continuar.");
 
-        boxBarcaWebCloud.setBackground(new java.awt.Color(1, 1, 1));
-        boxBarcaWebCloud.setForeground(new java.awt.Color(204, 204, 204));
-        boxBarcaWebCloud.setText("BWC Barca Web Cloud");
-        boxBarcaWebCloud.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                boxBarcaWebCloudActionPerformed(evt);
-            }
-        });
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Este setup irá te ajudar na instalação do barca.");
 
-        labelInstall.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        labelInstall.setForeground(new java.awt.Color(204, 204, 204));
-        labelInstall.setText("Selecione o que deseja instalar/atualizar");
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Antes de iniciar a instalação, certifique-se de que o barca");
 
-        labelTranslate.setForeground(new java.awt.Color(204, 204, 204));
-        labelTranslate.setText("v1.0.0");
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("não esteja em execução.");
 
-        textFieldPath.setBackground(new java.awt.Color(204, 204, 204));
-        textFieldPath.setForeground(new java.awt.Color(51, 51, 51));
-        textFieldPath.setText("C:\\Program Files (x86)\\Barca");
-
-        btnPath.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnPath.setText("Alterar");
-        btnPath.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPathActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(textFieldPath, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnPath, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(labelTranslate, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 320, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(boxBarcaWebCloud, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(boxBarcaDesktop, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(boxBarcaCLI, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(140, 140, 140))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(labelInstall, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(39, 39, 39))))
+        javax.swing.GroupLayout painelWelcomeToBarcaLayout = new javax.swing.GroupLayout(painelWelcomeToBarca);
+        painelWelcomeToBarca.setLayout(painelWelcomeToBarcaLayout);
+        painelWelcomeToBarcaLayout.setHorizontalGroup(
+            painelWelcomeToBarcaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelWelcomeToBarcaLayout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addGroup(painelWelcomeToBarcaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelInstall2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(painelWelcomeToBarcaLayout.createSequentialGroup()
+                        .addGroup(painelWelcomeToBarcaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel7))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 370, Short.MAX_VALUE)
+                        .addComponent(jLabel4)
+                        .addGap(60, 60, 60))))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(labelTranslate, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+        painelWelcomeToBarcaLayout.setVerticalGroup(
+            painelWelcomeToBarcaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelWelcomeToBarcaLayout.createSequentialGroup()
+                .addContainerGap(93, Short.MAX_VALUE)
+                .addComponent(labelInstall2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(painelWelcomeToBarcaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(painelWelcomeToBarcaLayout.createSequentialGroup()
+                        .addGap(45, 45, 45)
+                        .addComponent(jLabel5)
+                        .addGap(36, 36, 36)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(labelInstall, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(34, 34, 34)
-                        .addComponent(boxBarcaCLI)
-                        .addGap(18, 18, 18)
-                        .addComponent(boxBarcaWebCloud)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(boxBarcaDesktop))
-                    .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textFieldPath, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnPath, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(38, 38, 38))
+                        .addComponent(jLabel7))
+                    .addComponent(jLabel4))
+                .addGap(10, 10, 10)
+                .addComponent(jLabel2)
+                .addGap(45, 45, 45))
         );
 
-        jPainel.add(jPanel1, "card2");
+        jPainel.add(painelWelcomeToBarca, "card2");
 
-        jPanel3.setBackground(new java.awt.Color(1, 1, 1));
-        jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        painelTermsAndLicense.setBackground(new java.awt.Color(1, 1, 1));
+        painelTermsAndLicense.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         titleSerialKey.setForeground(new java.awt.Color(204, 204, 204));
         titleSerialKey.setText("Por favor leia os termos de licença antes da instalação do Barca 64-bit");
@@ -176,37 +153,37 @@ static FinishPage finishFrame = new FinishPage();
         titleSerialKey2.setForeground(new java.awt.Color(204, 204, 204));
         titleSerialKey2.setText("License Agreement");
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout painelTermsAndLicenseLayout = new javax.swing.GroupLayout(painelTermsAndLicense);
+        painelTermsAndLicense.setLayout(painelTermsAndLicenseLayout);
+        painelTermsAndLicenseLayout.setHorizontalGroup(
+            painelTermsAndLicenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelTermsAndLicenseLayout.createSequentialGroup()
                 .addGap(44, 44, 44)
                 .addComponent(titleSerialKey, javax.swing.GroupLayout.PREFERRED_SIZE, 432, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(469, Short.MAX_VALUE))
-            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap(489, Short.MAX_VALUE))
+            .addGroup(painelTermsAndLicenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(painelTermsAndLicenseLayout.createSequentialGroup()
                     .addGap(38, 38, 38)
                     .addComponent(titleSerialKey2)
-                    .addContainerGap(780, Short.MAX_VALUE)))
+                    .addContainerGap(800, Short.MAX_VALUE)))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        painelTermsAndLicenseLayout.setVerticalGroup(
+            painelTermsAndLicenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelTermsAndLicenseLayout.createSequentialGroup()
                 .addGap(72, 72, 72)
                 .addComponent(titleSerialKey)
-                .addContainerGap(254, Short.MAX_VALUE))
-            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap(316, Short.MAX_VALUE))
+            .addGroup(painelTermsAndLicenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(painelTermsAndLicenseLayout.createSequentialGroup()
                     .addGap(39, 39, 39)
                     .addComponent(titleSerialKey2)
-                    .addContainerGap(283, Short.MAX_VALUE)))
+                    .addContainerGap(345, Short.MAX_VALUE)))
         );
 
-        jPainel.add(jPanel3, "card2");
+        jPainel.add(painelTermsAndLicense, "card2");
 
-        jPanel2.setBackground(new java.awt.Color(1, 1, 1));
-        jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        painelSerialKey.setBackground(new java.awt.Color(1, 1, 1));
+        painelSerialKey.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         labelSerialKey1.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         labelSerialKey1.setForeground(new java.awt.Color(204, 204, 204));
@@ -227,38 +204,38 @@ static FinishPage finishFrame = new FinishPage();
             }
         });
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout painelSerialKeyLayout = new javax.swing.GroupLayout(painelSerialKey);
+        painelSerialKey.setLayout(painelSerialKeyLayout);
+        painelSerialKeyLayout.setHorizontalGroup(
+            painelSerialKeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelSerialKeyLayout.createSequentialGroup()
                 .addGap(78, 78, 78)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(painelSerialKeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(titleSerialKey1)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGroup(painelSerialKeyLayout.createSequentialGroup()
                         .addGap(25, 25, 25)
                         .addComponent(titleSerialKeyMaster1)))
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanel2Layout.createSequentialGroup()
+            .addGroup(painelSerialKeyLayout.createSequentialGroup()
                 .addGap(208, 208, 208)
                 .addComponent(checkBoxLastVersionsOn1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(286, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelSerialKeyLayout.createSequentialGroup()
+                .addContainerGap(306, Short.MAX_VALUE)
                 .addComponent(labelSerialKey1)
                 .addGap(28, 28, 28)
                 .addComponent(txtSerialKey1, javax.swing.GroupLayout.PREFERRED_SIZE, 499, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(75, 75, 75))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+        painelSerialKeyLayout.setVerticalGroup(
+            painelSerialKeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelSerialKeyLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addComponent(titleSerialKey1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(titleSerialKeyMaster1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 170, Short.MAX_VALUE)
+                .addGroup(painelSerialKeyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtSerialKey1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelSerialKey1))
                 .addGap(69, 69, 69)
@@ -266,7 +243,169 @@ static FinishPage finishFrame = new FinishPage();
                 .addGap(58, 58, 58))
         );
 
-        jPainel.add(jPanel2, "card2");
+        jPainel.add(painelSerialKey, "card2");
+
+        painelTools.setBackground(new java.awt.Color(1, 1, 1));
+        painelTools.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        labelInstall.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        labelInstall.setForeground(new java.awt.Color(204, 204, 204));
+        labelInstall.setText("Selecione o que deseja instalar ");
+
+        fieldPathInstallerBarca.setBackground(new java.awt.Color(204, 204, 204));
+        fieldPathInstallerBarca.setForeground(new java.awt.Color(51, 51, 51));
+        fieldPathInstallerBarca.setText("C:\\Program Files (x86)\\Barca");
+        fieldPathInstallerBarca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldPathInstallerBarcaActionPerformed(evt);
+            }
+        });
+
+        btnPathInstaller.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnPathInstaller.setText("Alterar");
+        btnPathInstaller.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPathInstallerActionPerformed(evt);
+            }
+        });
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Escolhendo as ferramentas");
+
+        btnRadioBarcaCLI.setForeground(new java.awt.Color(255, 255, 255));
+        btnRadioBarcaCLI.setText("Barca CLI");
+        btnRadioBarcaCLI.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRadioBarcaCLIActionPerformed(evt);
+            }
+        });
+
+        btnRadioBWC.setForeground(new java.awt.Color(255, 255, 255));
+        btnRadioBWC.setText("BWC (Barca Web Cloud)");
+
+        btnRadioBarcaDesktop.setForeground(new java.awt.Color(255, 255, 255));
+        btnRadioBarcaDesktop.setText("Barca Desktop");
+
+        btnRadioFull.setForeground(new java.awt.Color(255, 255, 255));
+        btnRadioFull.setText("Full");
+
+        btnRadioManual.setForeground(new java.awt.Color(255, 255, 255));
+        btnRadioManual.setText("Manual");
+
+        txtDescriptionTools.setForeground(new java.awt.Color(255, 255, 255));
+        txtDescriptionTools.setText("Descrição da ferramenta");
+
+        txtAreaTool.setBackground(new java.awt.Color(51, 51, 51));
+        txtAreaTool.setColumns(20);
+        txtAreaTool.setForeground(new java.awt.Color(204, 204, 204));
+        txtAreaTool.setRows(5);
+        jScrollPane1.setViewportView(txtAreaTool);
+
+        javax.swing.GroupLayout painelToolsLayout = new javax.swing.GroupLayout(painelTools);
+        painelTools.setLayout(painelToolsLayout);
+        painelToolsLayout.setHorizontalGroup(
+            painelToolsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelToolsLayout.createSequentialGroup()
+                .addGroup(painelToolsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(painelToolsLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(fieldPathInstallerBarca, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnPathInstaller, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(32, 32, 32))
+                    .addGroup(painelToolsLayout.createSequentialGroup()
+                        .addGroup(painelToolsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(painelToolsLayout.createSequentialGroup()
+                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(painelToolsLayout.createSequentialGroup()
+                                .addGap(38, 38, 38)
+                                .addGroup(painelToolsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnRadioBarcaCLI)
+                                    .addComponent(btnRadioBarcaDesktop)
+                                    .addComponent(btnRadioBWC)
+                                    .addComponent(btnRadioFull)
+                                    .addComponent(btnRadioManual)
+                                    .addComponent(labelInstall, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(painelToolsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtDescriptionTools))))
+                .addGap(307, 307, 307))
+            .addGroup(painelToolsLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(jLabel8)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        painelToolsLayout.setVerticalGroup(
+            painelToolsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelToolsLayout.createSequentialGroup()
+                .addGap(9, 9, 9)
+                .addComponent(jLabel8)
+                .addGap(18, 18, 18)
+                .addGroup(painelToolsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtDescriptionTools, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(painelToolsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(painelToolsLayout.createSequentialGroup()
+                        .addComponent(labelInstall)
+                        .addGap(28, 28, 28)
+                        .addComponent(btnRadioBarcaCLI)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnRadioBarcaDesktop)
+                        .addGap(19, 19, 19)
+                        .addComponent(btnRadioBWC)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnRadioFull))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnRadioManual)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
+                .addGroup(painelToolsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fieldPathInstallerBarca, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPathInstaller, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(16, 16, 16))
+        );
+
+        jPainel.add(painelTools, "card2");
+
+        painelSuccess.setBackground(new java.awt.Color(1, 1, 1));
+        painelSuccess.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        painelSuccess.setToolTipText("");
+
+        labelSerialKey2.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        labelSerialKey2.setForeground(new java.awt.Color(204, 204, 204));
+        labelSerialKey2.setText("Sua 1instalação foi");
+
+        titleSerialKey3.setForeground(new java.awt.Color(204, 204, 204));
+        titleSerialKey3.setText("Sua instalação foi concluída com sucesso.");
+
+        javax.swing.GroupLayout painelSuccessLayout = new javax.swing.GroupLayout(painelSuccess);
+        painelSuccess.setLayout(painelSuccessLayout);
+        painelSuccessLayout.setHorizontalGroup(
+            painelSuccessLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelSuccessLayout.createSequentialGroup()
+                .addContainerGap(254, Short.MAX_VALUE)
+                .addComponent(labelSerialKey2)
+                .addGap(602, 602, 602))
+            .addGroup(painelSuccessLayout.createSequentialGroup()
+                .addGap(321, 321, 321)
+                .addComponent(titleSerialKey3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        painelSuccessLayout.setVerticalGroup(
+            painelSuccessLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelSuccessLayout.createSequentialGroup()
+                .addContainerGap(128, Short.MAX_VALUE)
+                .addComponent(titleSerialKey3)
+                .addGap(93, 93, 93)
+                .addComponent(labelSerialKey2)
+                .addGap(149, 149, 149))
+        );
+
+        jPainel.add(painelSuccess, "card2");
 
         getContentPane().add(jPainel);
         jPainel.setBounds(-10, 90, 716, 346);
@@ -296,10 +435,12 @@ static FinishPage finishFrame = new FinishPage();
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "português-brasileiro", "english", "spanol", "mexico" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "português", "english", "spanol" }));
 
-        txtTitleProject.setText("Barca v1.0");
+        txtTitleProject.setForeground(new java.awt.Color(255, 255, 255));
+        txtTitleProject.setText("v1.0");
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Barca © Installer");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -312,17 +453,17 @@ static FinishPage finishFrame = new FinishPage();
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 288, Short.MAX_VALUE)
+                                .addGap(10, 10, 10)
+                                .addComponent(txtTitleProject, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGap(23, 288, Short.MAX_VALUE)
                                 .addComponent(btnHidden, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(btnProximo, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(78, 78, 78)
-                                .addComponent(btnFinish, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(txtTitleProject, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(btnFinish, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(95, 95, 95))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel3)
@@ -362,7 +503,7 @@ static FinishPage finishFrame = new FinishPage();
         jPainel.revalidate();
         
         // adicionar painel
-        jPainel.add(jPanel1);
+        jPainel.add(painelTools);
         jPainel.repaint();
         jPainel.revalidate();
         
@@ -377,7 +518,7 @@ static FinishPage finishFrame = new FinishPage();
         jPainel.revalidate();
         
         // adicionar painel
-        jPainel.add(jPanel3);
+        jPainel.add(painelSerialKey);
         jPainel.repaint();
         jPainel.revalidate();
     }//GEN-LAST:event_btnHiddenActionPerformed
@@ -390,26 +531,26 @@ static FinishPage finishFrame = new FinishPage();
         jPainel.revalidate();
         
         // adicionar painel
-        jPainel.add(jPanel2);
+        jPainel.add(painelTermsAndLicense);
         jPainel.repaint();
         jPainel.revalidate();
     }//GEN-LAST:event_btnProximoActionPerformed
 
-    private void boxBarcaWebCloudActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boxBarcaWebCloudActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boxBarcaWebCloudActionPerformed
-
-    private void btnPathActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPathActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnPathActionPerformed
-
-    private void boxBarcaDesktopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boxBarcaDesktopActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boxBarcaDesktopActionPerformed
-
     private void checkBoxLastVersionsOn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxLastVersionsOn1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_checkBoxLastVersionsOn1ActionPerformed
+
+    private void btnRadioBarcaCLIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRadioBarcaCLIActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRadioBarcaCLIActionPerformed
+
+    private void btnPathInstallerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPathInstallerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnPathInstallerActionPerformed
+
+    private void fieldPathInstallerBarcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldPathInstallerBarcaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldPathInstallerBarcaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -447,32 +588,47 @@ static FinishPage finishFrame = new FinishPage();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JCheckBox boxBarcaCLI;
-    private javax.swing.JCheckBox boxBarcaDesktop;
-    private javax.swing.JCheckBox boxBarcaWebCloud;
     private javax.swing.JButton btnFinish;
     private javax.swing.JButton btnHidden;
-    private javax.swing.JButton btnPath;
+    private javax.swing.JButton btnPathInstaller;
     private javax.swing.JButton btnProximo;
+    private javax.swing.JRadioButton btnRadioBWC;
+    private javax.swing.JRadioButton btnRadioBarcaCLI;
+    private javax.swing.JRadioButton btnRadioBarcaDesktop;
+    private javax.swing.JRadioButton btnRadioFull;
+    private javax.swing.JRadioButton btnRadioManual;
     private javax.swing.JCheckBox checkBoxLastVersionsOn1;
+    private javax.swing.JTextField fieldPathInstallerBarca;
     private javax.swing.Box.Filler filler1;
     private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPainel;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel labelInstall;
+    private javax.swing.JLabel labelInstall2;
     private javax.swing.JLabel labelSerialKey1;
-    private javax.swing.JLabel labelTranslate;
-    private javax.swing.JTextField textFieldPath;
+    private javax.swing.JLabel labelSerialKey2;
+    private javax.swing.JPanel painelSerialKey;
+    private javax.swing.JPanel painelSuccess;
+    private javax.swing.JPanel painelTermsAndLicense;
+    private javax.swing.JPanel painelTools;
+    private javax.swing.JPanel painelWelcomeToBarca;
     private javax.swing.JLabel titleSerialKey;
     private javax.swing.JLabel titleSerialKey1;
     private javax.swing.JLabel titleSerialKey2;
+    private javax.swing.JLabel titleSerialKey3;
     private javax.swing.JLabel titleSerialKeyMaster1;
+    private javax.swing.JTextArea txtAreaTool;
+    private javax.swing.JLabel txtDescriptionTools;
     private javax.swing.JTextField txtSerialKey1;
     private javax.swing.JLabel txtTitleProject;
     // End of variables declaration//GEN-END:variables
